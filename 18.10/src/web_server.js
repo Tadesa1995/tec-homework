@@ -16,7 +16,7 @@ app.get('/about',(req, res) =>{
 console.log(path.join(`C:`,`ajax js`,`tec-homework`,`18.10`,'public','index.html'));
 
 // // הרחב את web_server_1.5 כך שהאתר יכיל גם את הדפים הבאים : contact , courses , mentoring ,testimonials , events בדיוק כמו שהוספתם את הדפים index,about בתרגיל הקודם
-// web server 1.6
+// web server 1.6/1.7
 app.get('/courses',(req, res) =>{
     res.sendFile(path.join(`C:`,`ajax js`,`tec-homework`,`18.10`,'public','courses.html'));
     })
