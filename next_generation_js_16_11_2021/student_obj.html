@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <script>
+      class student{
+      constructor(name,age,gender){
+          this.name = name;
+          this.age = age;
+          this.gender = gender;
+      }
+      printALL() {
+          console.log(  this.name,
+          this.age,
+          this.gender)
+      }
+      isYoung() {
+          if (this.age>17)
+          console.log(true)
+          else  if (this.age<17){
+            console.log(false);
+          }
+      }
+    }
+      const student1 = new student("anderson silva",46,"male");
+      const student2 = new student("nick diaz",29,"male")
+      const student3 = new student("vitor belfort",12,"male");
+    // student1.printALL();
+  // class2 
+//   student2.isYoung();
+//    student3.isYoung();
+//    class3:in two ways
+const allStudent=[student1,student2,student3];
+allStudent.forEach(element => {
+    element.isYoung();
+});
+allStudent.map(element => element.isYoung())
+
+
+
+
+
+    </script>
+  </body>
+</html>
