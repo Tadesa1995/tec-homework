@@ -9,17 +9,20 @@
   <body>
 
     <script>
+        // 
       class student{
       constructor(name,age,gender){
           this.name = name;
           this.age = age;
           this.gender = gender;
       }
+    //
       printALL() {
           console.log(  this.name,
           this.age,
           this.gender)
       }
+      // 
       isYoung() {
           if (this.age>17)
           console.log(true)
@@ -28,6 +31,7 @@
           }
       }
     }
+  // another short way just to write return this.age<17
       const student1 = new student("anderson silva",46,"male");
       const student2 = new student("nick diaz",29,"male")
       const student3 = new student("vitor belfort",12,"male");
@@ -39,8 +43,10 @@
 const allStudent=[student1,student2,student3];
 allStudent.forEach(element => {
     element.isYoung();
+   
 });
 allStudent.map(element => element.isYoung())
+
 
 
 
@@ -49,3 +55,5 @@ allStudent.map(element => element.isYoung())
     </script>
   </body>
 </html>
+<!-- when u add ++its like the value +1 and its set and a new value in the stack -->
+<!--  -->
