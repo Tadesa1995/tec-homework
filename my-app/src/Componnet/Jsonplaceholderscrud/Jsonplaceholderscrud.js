@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './Style.css';
 
 class Jsonplaceholderscrud extends Component {
   state = {
@@ -8,11 +9,15 @@ class Jsonplaceholderscrud extends Component {
     inputLast: "",
   };
   componentDidMount() {
+    this.getPosts()
+  }
+  getPosts=()=>{
     fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => response.json())
-      .then((posts) => {
-        this.setState({ posts });
-      });
+    .then((response) => response.json())
+    .then((posts) => {
+      this.setState({ posts });
+    });
+ 
   }
 
   render() {
@@ -67,10 +72,7 @@ class Jsonplaceholderscrud extends Component {
           <br />
           <button
             onClick={() => {
-           
-
               let editpost = posts.find((it) => it.id === postToEdit.id);
-            
               editpost.body = this.state.postToEdit.body;
               editpost.title = this.state.postToEdit.title;
               this.setState({ posts });
